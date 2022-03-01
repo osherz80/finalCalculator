@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'digital clock';
+    src: url('https://drive.google.com/file/d/16qyzSNMdqqK0F51JGK7kU8AS9zDLBUjU/view?usp=sharing');
+}
+
 *{
     box-sizing: border-box;
     font-family: sans-serif;
@@ -6,6 +11,8 @@
 ::-webkit-scrollbar {
     height: 7px;
     width: 11px;
+    position: relative;
+    bottom: 20px;
 }
   
 ::-webkit-scrollbar-track {
@@ -140,6 +147,7 @@ main{
 
 .Box:hover{
 cursor: pointer;
+background: content-box;
 }
 
 .pas{
@@ -169,6 +177,11 @@ cursor: pointer;
     font-size: 30px;
 }
 
+.oper{
+    overflow: unset;
+}
+
 .op:hover{
     cursor: pointer;
+    background: content-box;
 }

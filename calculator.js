@@ -10,18 +10,27 @@ const addDisplay = () => {
         drill.innerHTML = 0;
         res = false;
     }
-    if (drill.innerHTML == 0 && target !== ".") drill.innerHTML = target; 
+    if (drill.innerHTML == 0 && target !== "."){
+        drill.innerHTML = target; 
+        
+    }
     else if(drill.innerHTML.includes(".") && target == ".")return;
     else drill.innerHTML += target;
 
     ////// history bar display \\\\\\
 
-    
+    if(historiBar.innerHTML != 0){
+        if(target == "."){
+            if(!isNaN(historiBar.innerHTML.charAt(historiBar.innerHTML.length - 1)))historiBar.innerHTML += target;
+        }else historiBar.innerHTML += target;
+    }else historiBar.innerHTML = drill.innerHTML;
 };
 
 const op = () => {
     let target = event.target.innerHTML;
     operand.innerHTML = target
+
+    
 
     if(num1 == undefined){
         num1 = Number(drill.innerHTML);
@@ -31,12 +40,15 @@ const op = () => {
     else{
         num2 = Number(drill.innerHTML);
         if(lastOp != "="){
-        num1 = calcSum(num1,num2,lastOp);
-        drill.innerHTML = num1;
-        res = true;
+            num1 = calcSum(num1,num2,lastOp);
+            drill.innerHTML = num1;
+            res = true;
         }
         lastOp = target;
     }
+    if(isNaN(historiBar.innerHTML.charAt(historiBar.innerHTML.length-1))){
+     if(res = true)historiBar.innerHTML += drill.innerHTML; 
+    }else historiBar.innerHTML += target;
 };
 
 const callCalc = () => {
@@ -50,6 +62,8 @@ const callCalc = () => {
 const C = () => {
    drill.innerHTML = deleteStrEnd(drill.innerHTML);
    if(drill.innerHTML.length == 0)drill.innerHTML = 0;
+   if(drill.innerHTML != 0)historiBar.innerHTML = deleteStrEnd(historiBar.innerHTML);
+   if(historiBar.innerHTML.length = 0);
 };
 
 const deleteNum = () =>{
@@ -61,6 +75,7 @@ const reset = () => {
     res = true;
     drill.innerHTML = 0;
     operand .innerHTML = null;
+    historiBar.innerHTML = 0;
 };
 
 const deleteStrEnd = (str) =>{
