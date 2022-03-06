@@ -105,8 +105,11 @@ body{
     width: fit-content;
     margin: auto 2px;
     font-size: 35px;
-    overflow: overlay;
     text-align: end;
+}
+
+.drillp{
+    overflow: overlay;
 }
 
 .dis{
