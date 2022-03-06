@@ -177,8 +177,9 @@ background: content-box;
 
 @media screen and (max-width:728px){
     .all{
-        width: 60vw;
-        height: 80vw;
+        width: 65vw;
+        height: 85vw;
+        border: 8px solid gainsboro;
     }
 
     .drillDisplay{
@@ -194,6 +195,7 @@ background: content-box;
     width: 22%;
     height: 16%;
     font-size: 85%;
+    border: 2px solid #ebe8e8;;
     }
 
     .pas{
@@ -212,13 +214,13 @@ background: content-box;
 
     .sums{
         display: block;
-        width: 60vw;
+        width: 65vw;
         height: 20vh;
         padding: 15px;
         margin: 0 auto;
         background: silver;
         border-radius: 10px;
-        border: 10px solid gainsboro;
+        border: 8px solid gainsboro;
         overflow-y: overlay;
     }
 
@@ -232,9 +234,17 @@ background: content-box;
 }
 
 @media screen and (max-width:522px){
+    .all{
+        border: 6px solid gainsboro;
+    }
+
     .drillDisplay{
         height: 40px;
         padding: 4px 0px;
+        }
+
+        .box{
+            border: 1px solid #ebe8e8;;
         }
 
         .num{
@@ -243,6 +253,10 @@ background: content-box;
 
         .op{
             font-size: 100%;
+        }
+
+        .sums{
+            border: 6px solid gainsboro;
         }
 }
     
