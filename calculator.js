@@ -2,6 +2,7 @@
 let drill = document.getElementById('drill');
 let historiBar = document.getElementById('historiBar');
 let operand = document.getElementById('oper');
+let sums = document.getElementById('sums');
 let num1, num2, res = true, lastOp;
 
 const addDisplay = () => {
@@ -76,6 +77,7 @@ const reset = () => {
     drill.innerHTML = 0;
     operand .innerHTML = null;
     historiBar.innerHTML = 0;
+    sums.innerHTML = null;
 };
 
 const deleteStrEnd = (str) =>{
@@ -99,5 +101,12 @@ const calcSum = (a,b,op) => {
             sum = a/b;
             break;
     }
+    
+    let div = document.createElement('div');
+    div.id = 'container';
+    div.className = 'lastSum';
+    div.innerHTML = `${a} ${op} ${b} = ${sum}`;
+    document.getElementById('sums').appendChild(div);
+    
     return sum;
 };

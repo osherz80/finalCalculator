@@ -70,13 +70,11 @@ body{
     border: 10px solid gainsboro;
 }
 
-/* .sums{
-    margin: 50px 0;
-    width: 20%;
-    height: 400px;
-    overflow-y: scroll;
-    background: lightcyan;
-} */
+.sums{
+    display: none;
+}
+
+
 
 .drillDisplay{
     width: 95%;
@@ -106,7 +104,7 @@ body{
 .current p{
     width: fit-content;
     margin: auto 2px;
-    font-size: 40px;
+    font-size: 35px;
     overflow: overlay;
     text-align: end;
 }
@@ -138,11 +136,13 @@ main{
 .Box{
     width: 90px;
     height: 45px;
-    margin: 1%;
+    margin: 1.2%;
     background: black;
-    border: 3px solid gainsboro;
+    border: 3px solid #ebe8e8;
     border-radius: 10px;
     color: white;
+    text-align: center;
+    font-size: 30px;
 }
 
 .Box:hover{
@@ -166,22 +166,84 @@ background: content-box;
 }
 
 .op{
-    width: 90px;
-    height: 45px;
     margin: 2%;
-    background: black;
-    border: 1px solid white;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    font-size: 30px;
 }
 
 .oper{
     overflow: unset;
 }
 
-.op:hover{
-    cursor: pointer;
-    background: content-box;
+/*******   media   *************/
+
+@media screen and (max-width:728px){
+    .all{
+        width: 60vw;
+        height: 80vw;
+    }
+
+    .drillDisplay{
+    height: 50px;
+    padding: 5px 0px;
+    }
+
+    .wholeDrill{
+        display: none;
+    }
+
+    .Box{
+    width: 22%;
+    height: 16%;
+    font-size: 85%;
+    }
+
+    .pas{
+        margin: 2% auto;
+    }
+
+    .operands{
+        height: 40%;
+    }
+
+    .op{
+    width: 25%;
+    height: 28%;
+    font-size: 160%;
+    }
+
+    .sums{
+        display: block;
+        width: 60vw;
+        height: 20vh;
+        padding: 15px;
+        margin: 0 auto;
+        background: silver;
+        border-radius: 10px;
+        border: 10px solid gainsboro;
+        overflow-y: overlay;
+    }
+
+    .lastSum{
+        display: block;
+        border-radius: 10px;
+        background: white;
+        margin: 1.5% 0;
+        padding-left: 4%;
+    }
 }
+
+@media screen and (max-width:522px){
+    .drillDisplay{
+        height: 40px;
+        padding: 4px 0px;
+        }
+
+        .num{
+            font-size: 60%;
+        }
+
+        .op{
+            font-size: 100%;
+        }
+}
+    
+
