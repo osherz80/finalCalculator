@@ -228,19 +228,14 @@ background: content-box;
     }
 
     .clear{
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         background: wheat;
         background-image: url(https://images.emojiterra.com/openmoji/v13.1/512px/1f9f9.png);
         border-radius: 50%;
         background-position: center;
         background-size: cover;
         margin-left: auto;
-    }
-
-    .clear:hover{
-        transform: scale(1.4);
-    box-shadow: grey 1px 2px 2px 0px;
     }
 
     .lastSum{
