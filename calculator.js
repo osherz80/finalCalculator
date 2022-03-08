@@ -80,6 +80,9 @@ const reset = () => {
     sums.innerHTML = null;
 };
 
+const clearfunc = () => {
+    sums.innerHTML = null;
+}
 const deleteStrEnd = (str) =>{
    return  str.substring(0,str.length-1);
 };

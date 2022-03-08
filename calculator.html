@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="fluid">
+        <!-- <div class="sums" id="sums"></div> -->
+    <div class="all">
+        <div class="drillDisplay">
+            <div class="wholeDrill">
+            <p class="wholeDrillp" id="historiBar">0</p>
+        </div>
+        <div class="current">
+            <p class="drillp" id="drill">0</p>
+            <p class="oper" id="oper"></p>
+        </div>
+        </div>
+        <main>
+        <div class="nums">
+            <div class="num 1 Box" onclick="addDisplay()">1</div>
+            <div class="num 2 Box" onclick="addDisplay()">2</div>
+            <div class="num 3 Box" onclick="addDisplay()">3</div>
+            <div class="num c Box" onclick="C()">C</div>
+            <div class="num 4 Box" onclick="addDisplay()">4</div>
+            <div class="num 5 Box" onclick="addDisplay()">5</div>
+            <div class="num 6 Box" onclick="addDisplay()">6</div>
+            <div class="num ce Box" onclick="reset()">CE</div>
+            <div class="num 7 Box" onclick="addDisplay()">7</div>
+            <div class="num 8 Box" onclick="addDisplay()">8</div>
+            <div class="num 9 Box" onclick="addDisplay()">9</div>
+            <div class="num <- Box" onclick="deleteNum()">&#10145</div>
+            <div class="num 0 Box" onclick="addDisplay()">0</div>
+            <div class="num . Box" onclick="addDisplay()">.</div>
+        </div>
+        <div class="pas"></div>
+        <div class="operands">
+            <div class="op plus Box" onclick="op()">+</div>
+            <div class="op minus Box" onclick="op()">-</div>
+            <div class="op divide Box" onclick="op()">/</div>
+            <div class="op multiply Box" onclick="op()">*</div>
+            <div class="op sum Box" onclick="callCalc()">=</div>
+        </div>
+       </main>
+    </div>
+    <div class="sumsDiv" id="sumsDiv">
+        <div class="clear" id="clear" onclick="clearfunc()"></div>
+        <div class="sums" id="sums"></div>
+    </div>
+
+</div>
+</body>
+<link rel="stylesheet" href="calculator.css">
+<script src="calculator.js"></script>
+</html>
